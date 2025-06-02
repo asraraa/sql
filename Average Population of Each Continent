@@ -1,0 +1,7 @@
+/* key statement: rounded down to the nearest integer, use TRUNC */
+
+SELECT COUNTRY.Continent, TRUNC(AVG(CITY.Population))
+FROM CITY
+JOIN COUNTRY
+ON CITY.CountryCode = COUNTRY.Code
+GROUP BY COUNTRY.Continent;
